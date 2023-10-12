@@ -4,9 +4,21 @@ import java.io.IOException;
 public class checker {
     public static void main(String[] args) throws IOException{
         String token = "";
-        File filea = new File("Module4/4.03/familyMembers.txt"); // Corrected file path
+
+        System.out.print("Where is your file located?\n");
+     
+        //console Scanner
+        Scanner filePath = new Scanner(System.in);
+        String path = filePath.next();
+        filePath.close();
+
+        //The file being analyzed
+        File filea = new File(path);
+        
+        //file scanner
         Scanner inFile = new Scanner(filea);
 
+        //counters
         int bb = 0;
         int gg = 0;
         int gb = 0;
@@ -30,12 +42,10 @@ public class checker {
         double percentGG = Math.round(((gg / (double) total) * 100)*100)/100;
 
         System.out.println("The composition of families with 2 children:\n\n");
-
         System.out.println("The total number of families was: "+ totalFams+"\n");
         System.out.println("The number of Boy-Girl families is " + gb + " The percentage is " + percentGB+"%");
         System.out.println("The number of Boy-Boy families is " + bb + " The percentage is " + percentBB+"%");
         System.out.println("The number of Girl-Girl families is " + gg + " The percentage is " + percentGG+"%");
-
         inFile.close();
     }
 }
