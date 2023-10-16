@@ -5,15 +5,9 @@ public class checker {
     public static void main(String[] args) throws IOException{
         String token = "";
 
-        System.out.print("Where is your file located?\n");
-     
-        //console Scanner
-        Scanner filePath = new Scanner(System.in);
-        String path = filePath.next();
-        filePath.close();
 
         //The file being analyzed
-        File filea = new File(path);
+        File filea = new File("familyMembers.txt");
         
         //file scanner
         Scanner inFile = new Scanner(filea);
