@@ -22,7 +22,7 @@ public class HeadsOrTailsV1
 	    // Input number of coins flipped
 	    System.out.println("How many times will the coin be flipped? ");
 	    totalFlips = in.nextInt();
-
+		in.close();
 	    // Simulate flipping coins.
 	    while(flipCount < totalFlips)
 	    {
