@@ -5,3 +5,9 @@ coin with 100 flips and the five trials using an unbiased (fair)
 coin with 10,000 flips. Which simulation results do you think best 
 reflect the real world? Explain your answer.
 
+
+The trials I ran with 100 coin flips had an average of 28 heads and 72 tails.
+The trials I ran with 10,000 coin flips had an average of 4990 Heads and 5010 tails.
+I think the trial that shows the most accurate real world would be the 10,000 flips. This is because the more iterations
+of the program that you run, the more data you get.
+

@@ -24,13 +24,13 @@ public class HeadsOrTailsV1
 	    totalFlips = in.nextInt();
 
 	    // Simulate flipping coins.
-	    while(flipCount != totalFlips)
+	    while(flipCount < totalFlips)
 	    {
 	    	//Random value between 0.0 (inclusive) and 1.0 (exclusive)
 	        randNum = Math.random();
 	        System.out.print(flipCount + "\t" + randNum);
 
-	        if(randNum < 0.5)          //change to < 0.3
+	        if(randNum < 0.3)          //change to < 0.3
 	        {
 	            heads++;
 	            System.out.println("\t heads");
