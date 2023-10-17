@@ -1,0 +1,7 @@
+In a short response of three to five sentences, 
+share a portion of your results from the trials you ran for the HeadsOrTails program. 
+Specifically report on the five trials using an unbiased (fair)
+coin with 100 flips and the five trials using an unbiased (fair) 
+coin with 10,000 flips. Which simulation results do you think best 
+reflect the real world? Explain your answer.
+
