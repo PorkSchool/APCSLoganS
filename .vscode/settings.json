@@ -2,7 +2,8 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "java.project.sourcePaths": [
         "Module4/4.03",
-        "Module4/4.01"
+        "Module4/4.01",
+        "Module4/4.02"
     ],
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
 }
