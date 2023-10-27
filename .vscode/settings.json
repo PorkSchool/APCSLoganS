@@ -1,10 +1,13 @@
 {
     "java.debug.settings.onBuildFailureProceed": true,
+    "editor.disableMonospaceOptimizations": true,
     "java.project.sourcePaths": [
+        "Module4/4.06",
         "Module4/4.03",
         "Module4/4.02",
         "Module4/4.01",
-        "Module4/4.06"
+        "Module4"
     ],
+    "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
 }
