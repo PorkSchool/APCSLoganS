@@ -93,47 +93,52 @@ public class MathTrick{
         //h. Now reverse the letters in the string to read your message backward.
         
         //A Create
-        String out = RandomNumberString(3);
-        int outInt = Integer.parseInt(out);
-        System.out.println("Non Reversed: " +out);
+        String randomNumber = RandomNumberString(3);
+        int randomInt = Integer.parseInt(randomNumber);
+        System.out.println("Non Reversed: " +randomNumber);
 
         //B Reverse
-        String out2 = StringReverser(out);
-        int out2Int = Integer.parseInt(out2);
-        System.out.println("Reversed: " + out2);
+        String reversedNumber = StringReverser(randomNumber);
+        int reversedInt = Integer.parseInt(reversedNumber);
+        System.out.println("Reversed: " + reversedNumber);
 
         //c. Subtract the smaller number from the larger one.
-        String out3 = "";
-        int out3Int = 0;
-        if(outInt > out2Int){
-            out3Int = outInt -= out2Int;
+        String subtractedString = "";
+        int subtractedValue = 0;
+        if(randomInt > reversedInt){
+            subtractedValue = randomInt -= reversedInt;
         }else{
-            out3Int = out2Int -= outInt;
+            subtractedValue = reversedInt -= randomInt;
         }
-        out3 = String.valueOf(out3Int);
-        System.out.println("Larger number subtracted from smaller number: "+out3);
+        subtractedString = String.valueOf(subtractedValue);
+        System.out.println("Larger number subtracted from smaller number: "+subtractedString);
 
         //d. Now reverse the digits in the answer you got in step c and add it to that number.
-        String out4 = StringReverser(out3);
-        int out4Int = Integer.parseInt(out4);
-        out3Int += out4Int;
-        out3 = String.valueOf(out3Int);
-        System.out.println("Step C reversed and added to this number: "+ out3);
+        String reverseSubtract = StringReverser(subtractedString);
+        int reverseSubInt = Integer.parseInt(reverseSubtract);
+        
+        subtractedValue += reverseSubInt;
+        subtractedString = String.valueOf(subtractedValue);
+        
+        System.out.println("Step C reversed and added to this number: "+ subtractedString);
 
         //e. Multiply by one million.
-        out3Int *= 1000000;
-        out3 = String.valueOf(out3Int);
-        System.out.println("Muliply the last number by a million: "+ out3);
+        subtractedValue *= 1000000;
+        subtractedString = String.valueOf(subtractedValue);
+        System.out.println("Muliply the last number by a million: "+ subtractedString);
 
         //f. Subtract 733,361,573.
-        out3Int -= 733361573;
-        out3 = String.valueOf(out3Int);
-        System.out.println("Subtract the last number by 733,361,573: "+ out3);
+        subtractedValue -= 733361573;
+        subtractedString = String.valueOf(subtractedValue);
+        System.out.println("Subtract the last number by 733,361,573: "+ subtractedString);
 
         
         //g. Then, replace each of the digits in your answer, 
         //with the letter it corresponds to using the following table:
-        String out6 = StringReplacer(out3);
-        System.out.println("Replace Values: "+ out6);
+        String finalValue = StringReplacer(subtractedString);
+        System.out.println("Replace Values: "+ finalValue);
+
+        
+        System.out.println("The Message: "+ StringReverser(finalValue));
     }
 }
