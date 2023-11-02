@@ -31,14 +31,10 @@ public class SecretPasscode {
    }
 
    public static void main(String[] args) throws IOException {
-      int pwLength = 0;
-      int randNum = 0;
       String password = "";
-      
       File theMainFile = new File("PasswordOutput.txt");
 
       Scanner readFile = new Scanner(theMainFile);
-      //System.out.println(readFile.next());
 
       // initialize scanner and print writer
       Scanner in = new Scanner(System.in);
@@ -50,7 +46,7 @@ public class SecretPasscode {
       PrintWriter outFile = new PrintWriter(theMainFile);
 
       // Ask for password length
-      
+      int pwLength = 0;
       System.out.println("Please Provide a length for your password (Minimum 6): ");
       pwLength = Integer.parseInt(in.next());
       while (pwLength < 6) {

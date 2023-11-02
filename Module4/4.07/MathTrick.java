@@ -1,36 +1,42 @@
 public class MathTrick{
     //a. Generate a random 3-digit number so that the first and third digits differ by more than one.
     public static String RandomNumberString(int length){
-        String output = "";
-        int oneDigit = 1;
-        int twoDigit = 2;
-        int threeDigit = 3;
-        for(int i = 0; i < length; i++){
-            int ranDigit = (int)((Math.random()*9));
-            if(i == 0){
-                oneDigit = ranDigit;
-            }
-            else if(i == 1){
-                twoDigit = ranDigit;
-            }else if(i == 2){
-                threeDigit = ranDigit;
-            }
-            while(threeDigit == oneDigit + 1 || threeDigit == oneDigit - 1){
-                threeDigit = (int)((Math.random()*9));
-            }
+
+        int ranDigit = (int)((Math.random()*900)+100);
+        int oneDigit = ranDigit%10;
+        int threeDigit = ranDigit/100;
+
+        while(threeDigit == oneDigit + 1 || threeDigit == oneDigit - 1){
+            ranDigit = (int)((Math.random()*900)+100);     
+            oneDigit = ranDigit%10;
+            threeDigit = ranDigit/100;   
         }
-        output = String.valueOf(oneDigit)+String.valueOf(twoDigit)+String.valueOf(threeDigit);
-        return output;
+
+        return String.valueOf(ranDigit);
     }
     //b. Now reverse the digits to form a second number.
+    public static String NumberReverser(String inp){
+ 
+        int og = Integer.parseInt(inp);
+        int output = 0;
+        while(og>0){
+
+            output *= 10;
+            int lastDigit = og%10;
+            output += lastDigit;
+            og/=10;
+        }
+
+        return String.valueOf(output);
+    }
+
     public static String StringReverser(String inp){
-        char[] inpArray = inp.toCharArray();
-        
-        char tempChar = inpArray[0];
-        inpArray[0] = inpArray[inp.length()- 1];
-        inpArray[inp.length()- 1] = tempChar;
-    
-        String output = new String(inpArray);
+        String output = "";
+        for(int i = inp.length(); i > 0; i--){
+            String letter = inp.substring(i -1, i);
+            output+=letter;
+            letter = "";
+        }
         return output;
     }
     //variable before step g.
@@ -69,6 +75,9 @@ public class MathTrick{
                 case '9':
                     inpArray[i] = 'B';
                     break;
+                default:
+                    System.out.println("This is not a number value");
+                    break;
             }
         }
 
@@ -91,36 +100,35 @@ public class MathTrick{
         
         //Hint: since replaceLtr is expecting a String, you should use String.valueOf(number) to create a String variable from the integer
         //h. Now reverse the letters in the string to read your message backward.
-        
         //A Create
         String randomNumber = RandomNumberString(3);
         int randomInt = Integer.parseInt(randomNumber);
-        System.out.println("Non Reversed: " +randomNumber);
+        System.out.println("Original Number: " +randomNumber);
 
         //B Reverse
-        String reversedNumber = StringReverser(randomNumber);
+        String reversedNumber = NumberReverser(randomNumber);
         int reversedInt = Integer.parseInt(reversedNumber);
-        System.out.println("Reversed: " + reversedNumber);
+        System.out.println("Reversed Number: " + reversedNumber);
 
         //c. Subtract the smaller number from the larger one.
         String subtractedString = "";
         int subtractedValue = 0;
         if(randomInt > reversedInt){
-            subtractedValue = randomInt -= reversedInt;
+            subtractedValue = Math.abs(randomInt - reversedInt);
         }else{
-            subtractedValue = reversedInt -= randomInt;
+            subtractedValue = Math.abs(reversedInt - randomInt);
         }
         subtractedString = String.valueOf(subtractedValue);
         System.out.println("Larger number subtracted from smaller number: "+subtractedString);
 
         //d. Now reverse the digits in the answer you got in step c and add it to that number.
-        String reverseSubtract = StringReverser(subtractedString);
+        String reverseSubtract = NumberReverser(subtractedString);
         int reverseSubInt = Integer.parseInt(reverseSubtract);
         
         subtractedValue += reverseSubInt;
         subtractedString = String.valueOf(subtractedValue);
         
-        System.out.println("Step C reversed and added to this number: "+ subtractedString);
+        System.out.println("Reversed number added to diffrence: "+ subtractedString);
 
         //e. Multiply by one million.
         subtractedValue *= 1000000;
@@ -139,6 +147,6 @@ public class MathTrick{
         System.out.println("Replace Values: "+ finalValue);
 
         
-        System.out.println("The Message: "+ StringReverser(finalValue));
+        System.out.println("Reversed value: "+ StringReverser(finalValue));
     }
 }
