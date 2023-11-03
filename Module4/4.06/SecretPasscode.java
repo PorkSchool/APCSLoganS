@@ -69,7 +69,7 @@ public class SecretPasscode {
          choice = in.next();
          choice = choice.substring(0, 1);
       }
-   
+      outFile.close();
    
       System.out.println("Here is a list of your passwords:");
       
@@ -80,8 +80,9 @@ public class SecretPasscode {
          System.out.println(i+": " +readFile.next());
       }
 
+
+     
       readFile.close();
-      outFile.close();
       in.close();
    }
 
