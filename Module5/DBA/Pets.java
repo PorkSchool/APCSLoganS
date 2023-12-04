@@ -44,4 +44,11 @@ public String GetBreed(){
 public int GetAge(){
     return age;
 }
+
+public void Output(){
+
+    System.out.println("\n===========================\nThe name of your pet is "+name);
+    System.out.println("The breed of your pet is "+breed);
+    System.out.println("The age of your pet is "+age+"\n===========================\n");
+}
 }
