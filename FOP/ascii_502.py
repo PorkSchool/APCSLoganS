@@ -9,9 +9,6 @@ class Cipher:
 
         for i in range(len(msg)):
             self.deciphered += chr(ord(msg[i])-self.encryption[i])
-            
-        print(self.deciphered)
-
         return self.deciphered
          
     def Encode(self,msg):
@@ -22,17 +19,15 @@ class Cipher:
             self.random_val = random.randint(0,10)
             self.encryption[i] = self.random_val
             self.newMsg += chr(ord(msg[i])+self.random_val)
-            
-            
-
-        print(self.encryption)
-        print(self.newMsg)
         return self.newMsg
         
-
 def main():
     _cipher = Cipher()
-    msg = _cipher.Encode("This is an encoded message")
-    _cipher.Decipher(msg)
+    encodedMsg = _cipher.Encode("I really enjoy bannanas")
+    decipheredMsg = _cipher.Decipher(encodedMsg)
+
+
+    print("The encoded message is "+ encodedMsg)
+    print("The deciphered message is "+ decipheredMsg)
 
 main()
