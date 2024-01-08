@@ -5,13 +5,15 @@
         "Module5/DBA",
         "Module5/505",
         "Module5/502PlanetGravity",
+        "Module5",
         "Module4/4.07",
         "Module4/4.06",
         "Module4/4.03",
         "Module4/4.02",
         "Module4/4.01",
         "Module4",
-        "Module5"
+        "Module6/6012",
+        "Module6"
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
