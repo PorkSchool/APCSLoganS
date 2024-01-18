@@ -2,6 +2,8 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "editor.disableMonospaceOptimizations": true,
     "java.project.sourcePaths": [
+        "Module6/602",
+        "Module6/6012",
         "Module5/DBA",
         "Module5/505",
         "Module5/502PlanetGravity",
@@ -12,8 +14,7 @@
         "Module4/4.02",
         "Module4/4.01",
         "Module4",
-        "Module6/6012",
-        "Module6"
+        "Module6/604"
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
