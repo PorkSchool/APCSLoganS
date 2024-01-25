@@ -109,6 +109,9 @@ public class Magpie2
         return response;
     }
 
+    public int KeyWordKeyword(String statement, String goal, int startPos){
+       return findKeyword(statement, goal, startPos);
+    }
 
     /**
      * Search for one word in phrase. The search is not case
@@ -126,12 +129,12 @@ public class Magpie2
      * @return the index of the first occurrence of goal in
      *         statement or -1 if it's not found
      */
-    private int findKeyword(String statement, String goal, int startPos)
+    public int findKeyword(String statement, String goal, int startPos)
     {
         String phrase = statement.trim();
         // The only change to incorporate the startPos is in the line below
         int position = phrase.toLowerCase().indexOf(goal.toLowerCase(), startPos);
-
+        System.out.println(position);
         // Refinement--make sure the goal isn't part of a word
         while (position >= 0)
         {
@@ -153,14 +156,16 @@ public class Magpie2
             if (((before.compareTo("a") < 0) || (before.compareTo("z") > 0)) // before is not a letter
                   && ((after.compareTo("a") < 0) || (after.compareTo("z") > 0)))
             {
+                System.out.println(position);
                 return position;
             }
 
             // The last position didn't work, so let's find
             // the next, if there is one.
             position = phrase.indexOf(goal.toLowerCase(), position + 1);
-        }
 
+        }
+        System.out.println(position + "-1");
         return -1;
     }
 
