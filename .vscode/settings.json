@@ -19,7 +19,9 @@
         "Module4",
         "Module7",
         "Module7/702",
-        "Module7/703"
+        "Module7/703",
+        "Module7/hurricane",
+        "Module7/705"
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
