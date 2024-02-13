@@ -2,6 +2,11 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "editor.disableMonospaceOptimizations": true,
     "java.project.sourcePaths": [
+        "Module7/hurricane",
+        "Module7/705copy",
+        "Module7/703",
+        "Module7/702",
+        "Module7",
         "Module6/MagPie",
         "Module6/604",
         "Module6/602",
@@ -17,12 +22,7 @@
         "Module4/4.02",
         "Module4/4.01",
         "Module4",
-        "Module7",
-        "Module7/702",
-        "Module7/703",
-        "Module7/hurricane",
-        "Module7/705,",
-        "Module7/705copy"
+        "InsersionSort"
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
