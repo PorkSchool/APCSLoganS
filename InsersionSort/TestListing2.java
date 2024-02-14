@@ -51,15 +51,22 @@ public class TestListing2
         {
             HouseListing next = source[ i ];
             int insertIndex = 0;
+
+            //doesnt check the same item twice 
             int k = i;
+
+            //compares i item to each item in the list starting at k
             while( k > 0 && insertIndex == 0 )
             {
+                //checks if i item is greater then the k item 
                 if( next.getCost() > dest[k-1].getCost() )
                 {
+                    //if it is then it will insert after because larger
                     insertIndex = k;
                 }
                 else
                 {
+                    //if not it will insert before
                     dest[ k ] = dest[ k - 1 ];
                 }
                 k--;
