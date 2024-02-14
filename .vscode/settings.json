@@ -22,7 +22,8 @@
         "Module4/4.02",
         "Module4/4.01",
         "Module4",
-        "InsersionSort"
+        "InsersionSort",
+        "Module7/709"
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
