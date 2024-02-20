@@ -3,6 +3,7 @@
     "editor.disableMonospaceOptimizations": true,
     "java.project.sourcePaths": [
         "Module7/hurricane",
+        "Module7/709",
         "Module7/705copy",
         "Module7/703",
         "Module7/702",
@@ -23,7 +24,7 @@
         "Module4/4.01",
         "Module4",
         "InsersionSort",
-        "Module7/709"
+        "Module8/SequentialSearch"
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
