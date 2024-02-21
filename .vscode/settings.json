@@ -2,6 +2,7 @@
     "java.debug.settings.onBuildFailureProceed": true,
     "editor.disableMonospaceOptimizations": true,
     "java.project.sourcePaths": [
+        "Module8/SequentialSearch",
         "Module7/hurricane",
         "Module7/709",
         "Module7/705copy",
@@ -24,7 +25,7 @@
         "Module4/4.01",
         "Module4",
         "InsersionSort",
-        "Module8/SequentialSearch"
+        "Module8/BinarySearch"
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"

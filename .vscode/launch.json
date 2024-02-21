@@ -1,0 +1,273 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "CheeseCakeTesterV1",
+            "request": "launch",
+            "mainClass": "CheeseCakeTesterV1",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "CityWeatherTesterV1",
+            "request": "launch",
+            "mainClass": "CityWeatherTesterV1",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "CityWeatherTesterV2",
+            "request": "launch",
+            "mainClass": "CityWeatherTesterV2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "ElectionArray",
+            "request": "launch",
+            "mainClass": "ElectionArray",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "ElectionList",
+            "request": "launch",
+            "mainClass": "ElectionList",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Enrichment",
+            "request": "launch",
+            "mainClass": "Enrichment",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "FormattingNumericValues",
+            "request": "launch",
+            "mainClass": "FormattingNumericValues",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "FormattingStrings",
+            "request": "launch",
+            "mainClass": "FormattingStrings",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "GradeAverage",
+            "request": "launch",
+            "mainClass": "GradeAverage",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Gradebook",
+            "request": "launch",
+            "mainClass": "Gradebook",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "GuessMyNumberV1",
+            "request": "launch",
+            "mainClass": "GuessMyNumberV1",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "HeadsOrTailsV1",
+            "request": "launch",
+            "mainClass": "HeadsOrTailsV1",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "HurricaneTester",
+            "request": "launch",
+            "mainClass": "HurricaneTester",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "LotteryV2",
+            "request": "launch",
+            "mainClass": "LotteryV2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MagpieRunner2",
+            "request": "launch",
+            "mainClass": "MagpieRunner2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MathTrick",
+            "request": "launch",
+            "mainClass": "MathTrick",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MoviePlayer",
+            "request": "launch",
+            "mainClass": "MoviePlayer",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MusicPlayer",
+            "request": "launch",
+            "mainClass": "MusicPlayer",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MusicPlayer2",
+            "request": "launch",
+            "mainClass": "MusicPlayer2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MysteryPrintWriter",
+            "request": "launch",
+            "mainClass": "MysteryPrintWriter",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "PetsTester",
+            "request": "launch",
+            "mainClass": "PetsTester",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "PlanetGravity",
+            "request": "launch",
+            "mainClass": "PlanetGravity",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "PrintWriterDemoV1",
+            "request": "launch",
+            "mainClass": "PrintWriterDemoV1",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "QuizResults",
+            "request": "launch",
+            "mainClass": "QuizResults",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "SecretPasscode",
+            "request": "launch",
+            "mainClass": "SecretPasscode",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "StringExplorer",
+            "request": "launch",
+            "mainClass": "StringExplorer",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "SwapperTester",
+            "request": "launch",
+            "mainClass": "SwapperTester",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "TestAssignment2",
+            "request": "launch",
+            "mainClass": "TestAssignment2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "TestListing2",
+            "request": "launch",
+            "mainClass": "TestListing2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "TheTester",
+            "request": "launch",
+            "mainClass": "TheTester",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "CityWeatherTesterV1(1)",
+            "request": "launch",
+            "mainClass": "WhiteHatHacking.CityWeatherTesterV1",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "checker",
+            "request": "launch",
+            "mainClass": "checker",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "dba6",
+            "request": "launch",
+            "mainClass": "dba6",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "mcq",
+            "request": "launch",
+            "mainClass": "mcq",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "tester",
+            "request": "launch",
+            "mainClass": "tester",
+            "projectName": "APCSLoganS_2bc93d23"
+        }
+    ]
+}
