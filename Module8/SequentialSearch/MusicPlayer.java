@@ -3,17 +3,17 @@ import java.util.ArrayList;
 public class MusicPlayer {
     public static void main(String[] args) {
 
-        Music[] musicArray = new Music[10];
-        musicArray[0] = new Music("Bohemian Rhapsody", 1975, "Queen");
-        musicArray[1] = new Music("Billie Jean", 1983, "Michael Jackson");
-        musicArray[2] = new Music("Hotel California", 1976, "Eagles");
-        musicArray[3] = new Music("Imagine", 1971, "John Lennon");
-        musicArray[4] = new Music("Hey Jude", 1968, "The Beatles");
-        musicArray[5] = new Music("Thriller", 1982, "Michael Jackson");
-        musicArray[6] = new Music("Stairway to Heaven", 1971, "Led Zeppelin");
-        musicArray[7] = new Music("Smells Like Teen Spirit", 1991, "Nirvana");
-        musicArray[8] = new Music("Wonderwall", 1995, "Oasis");
-        musicArray[9] = new Music("Imagine", 1975, "John Lennon");
+        Music2[] musicArray = new Music2[10];
+        musicArray[0] = new Music2("Bohemian Rhapsody", 1975, "Queen");
+        musicArray[1] = new Music2("Billie Jean", 1983, "Michael Jackson");
+        musicArray[2] = new Music2("Hotel California", 1976, "Eagles");
+        musicArray[3] = new Music2("Imagine", 1971, "John Lennon");
+        musicArray[4] = new Music2("Hey Jude", 1968, "The Beatles");
+        musicArray[5] = new Music2("Thriller", 1982, "Michael Jackson");
+        musicArray[6] = new Music2("Stairway to Heaven", 1971, "Led Zeppelin");
+        musicArray[7] = new Music2("Smells Like Teen Spirit", 1991, "Nirvana");
+        musicArray[8] = new Music2("Wonderwall", 1995, "Oasis");
+        musicArray[9] = new Music2("Imagine", 1975, "John Lennon");
 
         PrintTable(musicArray, "Original");
         System.out.println("\n\n");
@@ -34,21 +34,21 @@ public class MusicPlayer {
 
     }
 
-    public static void PrintTable(Music[] list, String change) {
+    public static void PrintTable(Music2[] list, String change) {
         System.out.println("\n\n" + change + "\n");
 
         System.out.printf("|%-30S | %4S | %20S|%n%n", "Name", "Year", "Artist");
 
-        for (Music music : list) {
+        for (Music2 music : list) {
             System.out.printf("|%-30s | %4d | %20s|%n", music.getTitle(), music.getYear(), music.getArtist());
         }
 
     }
 
     // a method that searches the array for a particular song title
-    public static void SearchTitle(Music[] r, String toFind) {
+    public static void SearchTitle(Music2[] r, String toFind) {
         int found = -1;
-        ArrayList<Music> out = new ArrayList<>();
+        ArrayList<Music2> out = new ArrayList<>();
 
         for (int i = 0; i < r.length; i++) {
             if (r[i].getTitle().compareTo(toFind) == 0) {
@@ -70,9 +70,9 @@ public class MusicPlayer {
 
     // a method that searches the array for year released (the output should list
     // all songs found from that year)
-    public static void SearchYear(Music[] r, int toFind) {
+    public static void SearchYear(Music2[] r, int toFind) {
         int found = -1;
-        ArrayList<Music> out = new ArrayList<>();
+        ArrayList<Music2> out = new ArrayList<>();
 
         for (int i = 0; i < r.length; i++) {
             if (r[i].getYear() == toFind) {
@@ -93,9 +93,9 @@ public class MusicPlayer {
 
     // a method that searches the array for the name of the artist
     // (the output should list all songs performed by that artist)
-    public static void SearchArtistName(Music[] r, String toFind) {
+    public static void SearchArtistName(Music2[] r, String toFind) {
         int found = -1;
-        ArrayList<Music> out = new ArrayList<>();
+        ArrayList<Music2> out = new ArrayList<>();
 
         for (int i = 0; i < r.length; i++) {
             if (r[i].getArtist().compareTo(toFind) == 0) {

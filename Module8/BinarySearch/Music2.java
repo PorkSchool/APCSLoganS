@@ -6,7 +6,7 @@
  * @version (enter today's date)
  *
  */
-public class Music
+public class Music2
 {
     // instance variables
     private int year;
@@ -14,7 +14,7 @@ public class Music
     private String artist;
 
     // Constructor for objects of class Music
-    public Music(String t, int y, String a)
+    public Music2(String t, int y, String a)
     {
         // initialize instance variables
         title = t;
