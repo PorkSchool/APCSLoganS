@@ -35,7 +35,6 @@ public class MusicPlayer2 {
         System.out.println("\n\n");
 
         SortStringArtist(musicArray);
-        SearchArtistName(musicArray, "Michael Jackson");
         SearchArtistName(musicArray, "Led Zeppelin");
         SearchArtistName(musicArray, "Kanye West");
 
