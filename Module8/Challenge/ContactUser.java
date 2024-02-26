@@ -1,0 +1,300 @@
+import java.util.ArrayList;
+
+/**
+ * ContactUser
+ * Logan Santamarina
+ * 2/26/24
+ * A contact book that outputs the search results
+ */
+public class ContactUser {
+
+    public static void main(String[] args) {
+        // Declare an array of at least 10 people in a contacts list
+        // Declare an array of Contact objects
+        Contact[] contacts = new Contact[10];
+
+        // Populate the array with Contact objects
+        contacts[0] = new Contact("John Smith", "Friend", 1125, "(123) 456-7890", "john@example.com");
+        contacts[1] = new Contact("Alice Johnson", "Family", 1010, "(234) 567-8901", "alice@example.com");
+        contacts[2] = new Contact("Michael Lee", "Father", 1203, "(345) 678-9012", "michael@example.com");
+        contacts[3] = new Contact("Emily Davis", "Colleague", 0722, "(456) 789-0123", "emily@example.com");
+        contacts[4] = new Contact("John Smith", "Friend", 0215, "(567) 890-1234", "john.smith@example.com");
+        contacts[5] = new Contact("Sarah Miller", "Sister", 1225, "(678) 901-2345", "sarah@example.com");
+        contacts[6] = new Contact("David Brown", "Family", 0401, "(789) 012-3456", "david@example.com");
+        contacts[7] = new Contact("John Doe", "Brother", 1123, "(890) 123-4567", "john.doe@example.com");
+        contacts[8] = new Contact("Emily Davis", "Friend", 0427, "(901) 234-5678", "emily@example.com");
+        contacts[9] = new Contact("Michael Johnson", "Family", 1212, "(987) 654-3210", "michael.j@example.com");
+        PrintTable(contacts, "Original");
+
+        // showing results when a name is found and when not found.
+        System.out.println("\n\nSearching for contact Names");
+        SearchName(contacts, "Emily Davis");
+        SearchName(contacts, "Thomas Jefferson");
+
+        System.out.println("\n\nSearching for Simalair relationships");
+        SearchRelation(contacts, "Friend");
+        SearchRelation(contacts, "Family");
+        SearchRelation(contacts, "Ex Wife");
+
+        System.out.println("\n\nSearching for Simalair Birthdays");
+        SearchBday(contacts, 1212);
+        SearchBday(contacts, 523);
+
+        System.out.println("\n\nSearching for Simalair Numbers");
+        SearchNumber(contacts, "(123) 456-7890");
+        SearchNumber(contacts, "(456) 786-3421");
+
+        System.out.println("\n\nSearching for Simalair Emails");
+        SearchEmail(contacts, "emily@example.com");
+        SearchEmail(contacts, "logan@example.com");
+
+
+        // Test your search methods by calling each and displaying the results.
+
+        // Start by showing the original array. Then demonstrate searching for a name;
+
+        // Do the same for each of the other types of values associated with a contact.
+
+        // Include searches that should find more than one match. Remember,
+        // for birthday searches you are actually searching for month (i.e. Mar, May,
+        // Apr, etc.).
+
+        // Be sure to clearly label your output so someone looking at it
+        // knows which search criterion was applied each time.
+
+    }
+
+    public static void PrintTable(Contact[] list, String change) {
+        System.out.println("\n\n" + change + "\n");
+        System.out.printf("|%-20S | %-20S | %-20S | %20S| %-25S|%n", "Name", "Relation", "Birthday", "Phone Number",
+                "Email");
+        for (Contact c : list) {
+            System.out.printf("|%-20s | %-20s | %-20s | %20s| %-25s|%n", c.getName(), c.getRelation(),
+                    c.BdayConverter(c.getBirthday()), c.getPhoneNumber(), c.getEmail());
+        }
+    }
+
+    // a binary search method that searches the array for a particular name
+    public static void SearchName(Contact[] r, String toFind) {
+        SortName(r);
+        // PrintTable(r, "DEBUG SORT");
+
+        // Initial values show the entire array
+        int high = r.length - 1; // Adjusted to the last index
+        int low = 0; // Changed to start from the first index
+        int probe;
+
+        // Goes until we settle on one value
+        while (high >= low) { // Adjusted to handle the case when high and low overlap
+            // Splits the segment we are checking in half
+            probe = (high + low) / 2;
+
+            if (r[probe].getName().compareTo(toFind) > 0)
+                high = probe - 1; // Adjusted to exclude the current probe index
+            else if (r[probe].getName().compareTo(toFind) < 0)
+                low = probe + 1; // Adjusted to exclude the current probe index
+            else {
+                // Found the target
+                Name_LP(r, probe, toFind);
+                return; // Return after finding the target
+            }
+        }
+
+        // If we reach here, the element was not found
+        System.out.println("NOT found: " + toFind);
+
+    }
+
+    public static void SortName(Contact[] array) {
+        int posMax;
+        Contact temp;
+        for (int i = array.length - 1; i >= 0; i--) {
+            posMax = 0;
+            for (int k = 0; k <= i; k++) {
+                if (array[k].getName().compareTo(array[posMax].getName()) > 0) {
+                    posMax = k;
+                }
+            }
+
+            temp = array[i];
+            array[i] = array[posMax];
+            array[posMax] = temp;
+        }
+    }
+
+    public static void Name_LP(Contact[] r, int low, String toFind) {
+        int i;
+        int start = low;
+        int end = low;
+
+        // find starting point of matches
+        i = low - 1;
+        while ((i >= 0) && (r[i].getName().compareTo(toFind) == 0)) {
+            start = i;
+            i--;
+        }
+        // find ending point of matches
+        i = low + 1;
+        while ((i < r.length) && (r[i].getName().compareTo(toFind) == 0)) {
+            end = i;
+            i++;
+        }
+        // now print out the matches
+        for (i = start; i <= end; i++)
+            System.out.println("Found: " + r[i].getName());
+
+    }
+
+    // a binary search method that searches the array for a relationship. The output
+    // should list all contacts with the same relationship, such as friend or aunt.
+    public static void SearchRelation(Contact[] r, String toFind) {
+        SortRelation(r);
+        // PrintTable(r, "DEBUG SORT");
+        // Initial values show the entire array
+        int high = r.length - 1; // Adjusted to the last index
+        int low = 0; // Changed to start from the first index
+        int probe;
+
+        // Goes until we settle on one value
+        while (high >= low) { // Adjusted to handle the case when high and low overlap
+            // Splits the segment we are checking in half
+            probe = (high + low) / 2;
+
+            if (r[probe].getRelation().compareTo(toFind) > 0)
+                high = probe - 1; // Adjusted to exclude the current probe index
+            else if (r[probe].getRelation().compareTo(toFind) < 0)
+                low = probe + 1; // Adjusted to exclude the current probe index
+            else {
+                // Found the target
+                Relation_LP(r, low, toFind);
+                return; // Return after finding the target
+            }
+        }
+
+        // If we reach here, the element was not found
+        System.out.println("NOT found: " + toFind);
+
+    }
+
+    public static void SortRelation(Contact[] array) {
+        int posMax;
+        Contact temp;
+        for (int i = array.length - 1; i >= 0; i--) {
+            posMax = 0;
+            for (int k = 0; k <= i; k++) {
+                if (array[k].getRelation().compareTo(array[posMax].getRelation()) > 0) {
+                    posMax = k;
+                }
+            }
+
+            temp = array[i];
+            array[i] = array[posMax];
+            array[posMax] = temp;
+        }
+    }
+
+    public static void Relation_LP(Contact[] r, int low, String toFind) {
+        int i;
+        int start = low;
+        int end = low;
+
+        // find starting point of matches
+        i = low - 1;
+        while ((i >= 0) && (r[i].getRelation().compareTo(toFind) == 0)) {
+            start = i;
+            i--;
+        }
+        // find ending point of matches
+        i = low + 1;
+        while ((i < r.length) && (r[i].getRelation().compareTo(toFind) == 0)) {
+            end = i;
+            i++;
+        }
+        // now print out the matches
+        for (i = start; i <= end; i++)
+            System.out.println("Found a simalair relation of " + toFind + " from " + r[i].getName());
+
+    }
+
+    // Create a linearPrint method to assist in finding all occurrences
+
+    // a sequential search method that searches the array for all birthdays in the
+    // specified month. Hint, substrings will help you when looking for matches
+
+    public static void SearchBday(Contact[] r, int toFind) {
+        int found = -1;
+        ArrayList<Contact> out = new ArrayList<>();
+
+        for (int i = 0; i < r.length; i++) {
+            if (r[i].getBirthday() == toFind) {
+                found = i;
+                out.add(r[i]);
+            }
+        }
+
+        if (found != -1) { // we have found the person
+            if (out.size() > 1) {
+                System.out.printf("Birthdays from the date %s were found %d Times%n%n",
+                        out.get(0).BdayConverter(toFind), out.size());
+            } else {
+                System.out.println("We found someone with a " + out.get(0).BdayConverter(toFind)
+                        + " Birthday in the contacts list");
+            }
+        } else
+            System.out.println("No birthdays from " + r[0].BdayConverter(toFind) + " were found in the roster\n");
+    }
+
+    // a sequential search method that searches the array for all contacts with the
+    // same phone number
+
+    public static void SearchNumber(Contact[] r, String toFind) {
+        int found = -1;
+        ArrayList<Contact> out = new ArrayList<>();
+
+        for (int i = 0; i < r.length; i++) {
+            if (r[i].getPhoneNumber().compareTo(toFind) == 0) {
+                found = i;
+                out.add(r[i]);
+                // break; //Uncomment to only select first found
+            }
+        }
+
+        if (found != -1) { // we have found the person
+            if (out.size() > 1) {
+                System.out.printf("The number %s was found %d Times%n%n", toFind,
+                        out.size());
+            } else {
+                System.out.println("We found the number " + toFind + " in the contact list");
+            }
+        } else
+            System.out.println(toFind + " is not found in the contact list");
+    }
+
+    // a sequential search method that searches the array for all instances of a
+    // particular email address
+    public static void SearchEmail(Contact[] r, String toFind) {
+        int found = -1;
+        ArrayList<Contact> out = new ArrayList<>();
+
+        for (int i = 0; i < r.length; i++) {
+            if (r[i].getEmail().compareTo(toFind) == 0) {
+                found = i;
+                out.add(r[i]);
+                // break; //Uncomment to only select first found
+            }
+        }
+
+        if (found != -1) { // we have found the person
+            if (out.size() > 1) {
+                System.out.printf("The Email %s was found %d Times%n", toFind,
+                        out.size());
+            } else {
+                System.out.println("We found the email " + toFind + " in the contact list");
+            }
+        } else
+            System.out.println(toFind + " is not found in the contact list");
+    }
+    // sort method string
+
+    // sort method int
+}

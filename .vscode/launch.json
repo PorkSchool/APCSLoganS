@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ContactUser",
+            "request": "launch",
+            "mainClass": "ContactUser",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MusicPlayer3",
+            "request": "launch",
+            "mainClass": "MusicPlayer3",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -1,0 +1,137 @@
+//Contact class used by the contact user class
+public class Contact {
+    // Establish instance variables for the entry's name, relation to you, birthday,
+    // phone number, and email address.
+    // For example: Diana Prince, aunt, Oct 25, 321-555-0811,
+    // wonderwoman@theamazon.net
+
+    private String name;
+    private String relation;
+    private int birthday;
+    private String phoneNumber;
+    private String email;
+
+    public Contact() {
+    }
+
+    public Contact(String name, String relation, int birthday, String phoneNumber, String email) {
+        this.name = name;
+        this.relation = relation;
+        this.birthday = birthday;
+        this.phoneNumber = phoneNumber;
+        this.email = email;
+    }
+
+    // birthday example 1025 would equal October 25th
+    //I found it easier to search for the birthdays using a number and then converting it to a string
+    public String BdayConverter(int bday) {
+        String str = String.valueOf(bday);
+        String month = str.substring(0, str.length()-2);
+        String day = str.substring(str.length() - 2);
+
+        String monthStr;
+        switch (month) {
+            case "1":
+                monthStr = "January";
+                break;
+            case "2":
+                monthStr = "February";
+                break;
+            case "3":
+                monthStr = "March";
+                break;
+            case "4":
+                monthStr = "April";
+                break;
+            case "5":
+                monthStr = "May";
+                break;
+            case "6":
+                monthStr = "June";
+                break;
+            case "7":
+                monthStr = "July";
+                break;
+            case "8":
+                monthStr = "August";
+                break;
+            case "9":
+                monthStr = "September";
+                break;
+            case "10":
+                monthStr = "October";
+                break;
+            case "11":
+                monthStr = "November";
+                break;
+            case "12":
+                monthStr = "December";
+                break;
+            default:
+                monthStr = "Invalid Month";
+                break;
+        }
+
+        return monthStr + " " + day;
+
+    }
+
+    // Getter and setter methods for name
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter and setter methods for relation
+    public String getRelation() {
+        return relation;
+    }
+
+    public void setRelation(String relation) {
+        this.relation = relation;
+    }
+
+    // Getter and setter methods for birthday
+    public int getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(int birthday) {
+        this.birthday = birthday;
+    }
+
+    // Getter and setter methods for phoneNumber
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    // Getter and setter methods for email
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    // Set up a constructor for a contact entry that will initialize all the
+    // instance variables.
+
+    // Create appropriate methods, including a toString method that returns a String
+    // with all of a contacts information.
+
+    public String toString(Contact c){
+        String str = String.format("|%-20s %-20s %-20s %20s %-25s", name, relation, BdayConverter(birthday), phoneNumber, email);
+        return str;
+    }
+
+    // Add any additional attributes or behaviors you feel are appropriate
+    // (optional).
+}
