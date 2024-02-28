@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Catapolt",
+            "request": "launch",
+            "mainClass": "Catapolt",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Test2D",
+            "request": "launch",
+            "mainClass": "Catapolt.Test2D",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Catapolt",
+            "request": "launch",
+            "mainClass": "Catapolt.Catapolt",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
             "name": "ContactUser",
             "request": "launch",
             "mainClass": "ContactUser",
