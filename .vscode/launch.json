@@ -6,6 +6,69 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ShapesTester3",
+            "request": "launch",
+            "mainClass": "ShapesTester3",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "RoundTest",
+            "request": "launch",
+            "mainClass": "RoundTest",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "ShapesTester2",
+            "request": "launch",
+            "mainClass": "ShapesTester2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "DBA8",
+            "request": "launch",
+            "mainClass": "DBA8",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "MagicToy",
+            "request": "launch",
+            "mainClass": "MagicToy",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "dba8",
+            "request": "launch",
+            "mainClass": "dba8",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "dba8",
+            "request": "launch",
+            "mainClass": "DBA.dba8",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "JavaFilesToText",
+            "request": "launch",
+            "mainClass": "JavaFilesToText",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Excavator",
+            "request": "launch",
+            "mainClass": "Excavator",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
             "name": "Catapolt",
             "request": "launch",
             "mainClass": "Catapolt",

@@ -28,7 +28,12 @@
         "Module4",
         "InsersionSort",
         "Module8",
-        "Module8/Catapolt"
+        "Module8/Catapolt",
+        "Module9",
+        "Module9/Terrain",
+        "Module8/DBA",
+        "Module9/Polymorphism"
+
     ],
     "editor.fontFamily": "Hack"
     // "terminal.integrated.cwd": "${workspaceFolder}/Module4/4.03"
