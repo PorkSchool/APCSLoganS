@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ShapesTester4",
+            "request": "launch",
+            "mainClass": "ShapesTester4",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
             "name": "ShapesTester3",
             "request": "launch",
             "mainClass": "ShapesTester3",

@@ -32,7 +32,10 @@
         "Module9",
         "Module9/Terrain",
         "Module8/DBA",
-        "Module9/Polymorphism"
+        "Module9/Polymorphism",
+        "Module9/Overiding",
+        "Module9/ClassConst"
+
 
     ],
     "editor.fontFamily": "Hack"

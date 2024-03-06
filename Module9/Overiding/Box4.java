@@ -6,13 +6,13 @@
  * @author Poly Morphism
  * @version 06/13/17
  */
-public class Box3 extends Rectangle3
+public class Box4 extends Rectangle4
 {
     // instance variables
     private int height;
 
     // Constructor for objects of class Box
-    public Box3(int l, int w, int h)
+    public Box4(int l, int w, int h)
     {
         // call superclass
         super(l, w);
@@ -31,7 +31,9 @@ public class Box3 extends Rectangle3
 
     public String toString()
     {
-        return "The box's dimensions are " + getLength() + " X " + getWidth() + " X " + height;
+        return "Box- " + getLength() + " X " + getWidth() + " X " + height;
     }
+
+    
     
 }
