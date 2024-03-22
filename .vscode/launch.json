@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Fibonachi",
+            "request": "launch",
+            "mainClass": "Fibonachi",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "other",
+            "request": "launch",
+            "mainClass": "other",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "PrimeRunner",
+            "request": "launch",
+            "mainClass": "PrimeRunner",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "RsaRunner",
+            "request": "launch",
+            "mainClass": "RsaRunner",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
             "name": "CaserTester",
             "request": "launch",
             "mainClass": "CaserTester",

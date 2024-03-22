@@ -34,7 +34,10 @@
         "Module8/DBA",
         "Module9/Polymorphism",
         "Module9/Overiding",
-        "Module9/ClassConst"
+        "Module9/ClassConst",
+        "Module9/OutsideBox",
+        "Module10"
+
 
 
     ],
