@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CoinCollectionTester",
+            "request": "launch",
+            "mainClass": "CoinCollectionTester",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Fibonachi2",
+            "request": "launch",
+            "mainClass": "Fibonachi2",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
+            "name": "Fibonacci",
+            "request": "launch",
+            "mainClass": "Fibonacci",
+            "projectName": "APCSLoganS_2bc93d23"
+        },
+        {
+            "type": "java",
             "name": "Fibonachi",
             "request": "launch",
             "mainClass": "Fibonachi",
